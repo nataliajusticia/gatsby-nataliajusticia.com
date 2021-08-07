@@ -1,0 +1,18 @@
+/*
+ * Footer
+ */
+
+.footer {
+  color: #fff;
+  background-color: #111a20;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
