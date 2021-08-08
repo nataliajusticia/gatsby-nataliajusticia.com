@@ -1,12 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
+import TitleSection from "../components/TitleSection";
 
 const AboutPage = () => {
   return (
     <Layout pageTitle="About me">
-      <p>
-        Hi there! I'm the proud creator of this site, which I built with Gatsby.
-      </p>
+      <TitleSection
+        title="About"
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo nisi, dapibus ac auctor in, tempus vel turpis."
+      />
     </Layout>
   );
 };

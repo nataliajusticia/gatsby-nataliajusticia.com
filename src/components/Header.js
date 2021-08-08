@@ -19,6 +19,9 @@ const Nav = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
             <a
               href="mailto:nataliajusticia@gmail.com"
               className={styles.contactBtn}
