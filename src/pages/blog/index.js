@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import TitleSection from "../components/TitleSection";
+import Layout from "../../components/Layout";
+import TitleSection from "../../components/TitleSection";
 
-import * as styles from "../styles/blog.module.css";
+import * as styles from "../../styles/blog.module.css";
 
 const BlogPage = ({ data }) => {
   return (
