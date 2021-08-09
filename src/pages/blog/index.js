@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import TitleSection from "../../components/TitleSection";
 
@@ -16,7 +16,9 @@ const BlogPage = ({ data }) => {
       <ul className={styles.blogList}>
         {data.allMdx.nodes.map((node) => (
           <li key={node.id} className={styles.blogPost}>
-            <h2>{node.frontmatter.title}</h2>
+            <h2>
+              <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
+            </h2>
             <p>{node.frontmatter.teaser}</p>
             <p className={styles.blogPostAuthor}>
               Author: {node.frontmatter.author}
@@ -32,7 +34,7 @@ const BlogPage = ({ data }) => {
 };
 
 export const query = graphql`
-  {
+  query BlogList {
     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
@@ -42,7 +44,7 @@ export const query = graphql`
           author
         }
         id
-        body
+        slug
       }
     }
   }
