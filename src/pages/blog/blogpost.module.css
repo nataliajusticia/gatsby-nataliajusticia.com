@@ -5,6 +5,7 @@
 .blogPost {
   max-width: 800px;
   margin: 0 auto;
+  padding: 80px 20px;
 }
 
 .blogPostDate {

@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
-import Layout from "../components/Layout";
-import TitleSection from "../components/TitleSection";
+
+import Layout from "../components/Layout/Layout";
 
 const NotFoundPage = () => {
   return (
     <Layout pageTitle="Not found">
-      <TitleSection
-        title="Page not found"
-        subtitle="Sorry, we couldn’t find what you were looking for."
-      />
+      <h1>Page not found</h1>
+      <p>Sorry, we couldn’t find what you were looking for.</p>
 
       <Link to="/">Go home</Link>
     </Layout>

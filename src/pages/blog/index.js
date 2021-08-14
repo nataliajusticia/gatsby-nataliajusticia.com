@@ -1,34 +1,33 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import TitleSection from "../../components/TitleSection";
 
-import * as styles from "../../styles/blog.module.css";
+import Layout from "../../components/Layout/Layout";
+
+import * as styles from "./blog.module.css";
 
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Blog">
-      <TitleSection
-        title="Articles"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo nisi, dapibus ac auctor in, tempus vel turpis."
-      />
+      <section className={styles.wrapper}>
+        <h1>All articles</h1>
 
-      <ul className={styles.blogList}>
-        {data.allMdx.nodes.map((node) => (
-          <li key={node.id} className={styles.blogPost}>
-            <h2>
-              <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
-            </h2>
-            <p>{node.frontmatter.teaser}</p>
-            <p className={styles.blogPostAuthor}>
-              Author: {node.frontmatter.author}
-            </p>
-            <p className={styles.blogPostDate}>
-              Posted: {node.frontmatter.date}
-            </p>
-          </li>
-        ))}
-      </ul>
+        <ul className={styles.blogList}>
+          {data.allMdx.nodes.map((node) => (
+            <li key={node.id} className={styles.blogPost}>
+              <h2>
+                <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
+              </h2>
+              <p>{node.frontmatter.teaser}</p>
+              <p className={styles.blogPostAuthor}>
+                Author: {node.frontmatter.author}
+              </p>
+              <p className={styles.blogPostDate}>
+                Posted: {node.frontmatter.date}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   );
 };

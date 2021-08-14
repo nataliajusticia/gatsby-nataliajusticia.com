@@ -1,6 +1,10 @@
-/*
- * Blog
- */
+/* Blog */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
 
 .blogList {
   list-style: none;
@@ -8,9 +12,8 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 36px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  grid-gap: 40px;
+  padding-top: 40px;
 }
 
 .blogPost {
@@ -40,4 +43,10 @@
 .blogPostDate {
   color: #464e53;
   font-size: 0.9rem;
+}
+
+@media screen and (min-width: 960px) {
+  .blogList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
