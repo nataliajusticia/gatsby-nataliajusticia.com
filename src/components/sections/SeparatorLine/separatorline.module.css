@@ -1,0 +1,16 @@
+/* Separator Line Section */
+
+.wrapper {
+  position: relative;
+}
+
+.separator {
+  border: 1px solid var(--black);
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

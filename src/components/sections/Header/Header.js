@@ -1,18 +1,17 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import * as styles from "./headersection.module.css";
+import * as styles from "./header.module.css";
 
-const HeaderSection = () => {
+const Header = () => {
   return (
     <section className={styles.wrapper}>
-      <StaticImage alt="Avatar of nj" src="./../../images/me.jpg" />
+      <StaticImage alt="Avatar of nj" src="./../../../images/me.jpg" />
 
       <div>
         <h1 className={styles.title}>
-          I’m natalia, a{" "}
-          <span className={styles.label}>frontend developer</span> that loves to
-          code.
+          I’m Natalia, a <span className={styles.label}>frontend dev</span> that
+          loves to code.
         </h1>
 
         <p className={styles.subtitle}>
@@ -25,4 +24,4 @@ const HeaderSection = () => {
   );
 };
 
-export default HeaderSection;
+export default Header;

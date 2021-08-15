@@ -1,11 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 
 import "../../styles/global.css";
-import * as styles from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -19,7 +18,7 @@ const Layout = ({ pageTitle, children }) => {
   `);
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className="mainWrapper">
       <title>
         {pageTitle} | {data.site.siteMetadata.title}
       </title>

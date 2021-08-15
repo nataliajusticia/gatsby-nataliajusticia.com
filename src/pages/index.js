@@ -1,12 +1,16 @@
 import React from "react";
 
-import Layout from "../components/Layout/Layout";
-import HeaderSection from "../components/HeaderSection/HeaderSection";
+import Layout from "../components/common/Layout";
+import Header from "../components/sections/Header/Header";
+import SeparatorLine from "../components/sections/SeparatorLine/SeparatorLine";
+import LatestArticles from "../components/sections/LatestArticles/LatestArticles";
 
 const IndexPage = () => {
   return (
     <Layout pageTitle="Homepage">
-      <HeaderSection />
+      <Header />
+      <SeparatorLine />
+      <LatestArticles />
     </Layout>
   );
 };
