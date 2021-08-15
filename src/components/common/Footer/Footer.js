@@ -9,7 +9,11 @@ const Footer = () => {
         <p className={styles.logo}>nj.</p>
         <ul className={styles.socialLinks}>
           <li>
-            <a href="https://github.com/nataliajusticia" target="_blank">
+            <a
+              href="https://github.com/nataliajusticia"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </li>
@@ -17,6 +21,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/natalia-justicia/"
               target="_blank"
+              rel="noreferrer"
             >
               Linkedin
             </a>
