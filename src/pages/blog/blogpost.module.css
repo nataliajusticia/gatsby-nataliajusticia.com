@@ -8,9 +8,16 @@
   padding: 80px 20px;
 }
 
+.blogPost h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
 .blogPostDate {
+  text-align: center;
   font-size: 0.9rem;
   color: #464e53;
+  margin-bottom: 5rem !important;
 }
 
 .blogPost p {

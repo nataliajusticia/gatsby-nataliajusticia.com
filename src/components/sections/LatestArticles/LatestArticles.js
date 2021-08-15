@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import * as styles from "./latestarticles.module.css";
 
@@ -12,6 +12,11 @@ const LatestArticles = () => {
           frontmatter {
             title
             date(formatString: "MMMM D, YYYY")
+            hero_image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
           id
           slug
@@ -28,10 +33,9 @@ const LatestArticles = () => {
         <ul className={styles.grid}>
           {data.allMdx.nodes.map((node) => (
             <li key={node.id}>
-              <StaticImage
-                alt="Post Image"
-                src="./../../../images/css-variables.png"
-                aspectRatio={16 / 9}
+              <GatsbyImage
+                image={getImage(node.frontmatter.hero_image)}
+                className={styles.image}
               />
               <h3 className={styles.titlePost}>
                 <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>

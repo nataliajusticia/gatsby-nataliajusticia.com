@@ -4,6 +4,7 @@ import Layout from "../components/common/Layout";
 import Header from "../components/sections/Header/Header";
 import SeparatorLine from "../components/sections/SeparatorLine/SeparatorLine";
 import LatestArticles from "../components/sections/LatestArticles/LatestArticles";
+import Contact from "../components/sections/Contact/Contact";
 
 const IndexPage = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage = () => {
       <Header />
       <SeparatorLine />
       <LatestArticles />
+      <Contact />
     </Layout>
   );
 };

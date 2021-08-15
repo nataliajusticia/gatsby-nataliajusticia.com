@@ -11,6 +11,7 @@
   --grey: #eaeaea;
   --white: #fff;
   --pink: #ffe9e9;
+  --grey-dark: #464e53;
 
   --body-font-family: "Poppins", Arial, Helvetica, sans-serif;
   --headings-font-family: "Vollkorn", "Times New Roman", Times, serif;
@@ -78,10 +79,10 @@ button {
   color: var(--white) !important;
   border: 2px solid var(--black);
   border-radius: 0;
-  padding: 0.65em 0.75em;
+  padding: 0.65em 1em;
   min-width: 100px;
   min-height: 40px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   text-transform: capitalize !important;
   letter-spacing: 0 !important;
@@ -104,10 +105,10 @@ button {
   color: var(--black) !important;
   border: 2px solid var(--black);
   border-radius: 0;
-  padding: 0.65em 0.75em;
+  padding: 0.65em 1em;
   min-width: 100px;
   min-height: 40px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   text-transform: capitalize !important;
   letter-spacing: 0 !important;
@@ -117,8 +118,8 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: var(--black);
-  color: var(--white) !important;
+  transform: scale(1.1);
+  will-change: transform;
 }
 
 /* Main Wrapper */

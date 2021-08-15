@@ -47,8 +47,8 @@
 }
 
 .navbar a {
-  text-transform: uppercase;
-  font-weight: 500;
+  text-transform: lowercase;
+  font-weight: 600;
   font-size: 20px;
   letter-spacing: 0.12em;
 }
