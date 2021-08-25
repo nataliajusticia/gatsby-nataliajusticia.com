@@ -23,8 +23,18 @@
   text-align: center;
 }
 
+.link:hover img {
+  transform: scale(1.2);
+}
+
 .image {
   height: 200px;
+  position: relative;
+}
+
+.image img {
+  transform: scale(1);
+  transition: opacity 0.25s linear, 0.25s transform ease-in-out !important;
 }
 
 .titlePost {

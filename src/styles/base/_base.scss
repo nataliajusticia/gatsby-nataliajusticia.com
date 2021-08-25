@@ -1,0 +1,164 @@
+// Base
+//
+// Default values for HTML elements
+// --------------------------------------------------
+
+html {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  color: $base-body-color;
+  background-color: $base-background;
+}
+
+body {
+  margin: 0;
+}
+
+// Links
+// --------------------------------------------------
+
+a,
+.link {
+  color: $base-link-color;
+  text-decoration: $base-link-text-decoration;
+  cursor: pointer;
+
+  &:hover {
+    color: $base-link-hover-color;
+    text-decoration: $base-link-hover-text-decoration;
+  }
+}
+
+// Text-level semantics
+// --------------------------------------------------
+
+b,
+strong {
+  font-weight: $base-strong-font-weight;
+}
+
+em {
+  color: $base-em-color;
+}
+
+small {
+  font-size: 80%;
+}
+
+// Block elements
+// --------------------------------------------------
+
+p,
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure {
+  margin: 0 0 $base-margin-vertical 0;
+}
+
+/* Add margin if adjacent element */
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + pre,
+* + address,
+* + fieldset,
+* + figure {
+  margin-top: $base-margin-vertical;
+}
+
+// Headings
+// --------------------------------------------------
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0 0 $base-margin-vertical 0;
+  font-family: $base-heading-font-family;
+  font-weight: $base-heading-font-weight;
+  color: $base-heading-color;
+}
+
+/* Add margin if adjacent element */
+* + h1,
+* + .h1,
+* + h2,
+* + .h2,
+* + h3,
+* + .h3,
+* + h4,
+* + .h4,
+* + h5,
+* + .h5,
+* + h6,
+* + .h6 {
+  margin-top: $base-heading-margin-top;
+}
+
+/* Sizes */
+h1,
+.h1 {
+  font-size: $base-h1-font-size;
+  line-height: $base-h1-line-height;
+}
+
+h2,
+.h2 {
+  font-size: $base-h2-font-size;
+  line-height: $base-h2-line-height;
+}
+
+h3,
+.h3 {
+  font-size: $base-h3-font-size;
+  line-height: $base-h3-line-height;
+}
+
+h4,
+.h4 {
+  font-size: $base-h4-font-size;
+  line-height: $base-h4-line-height;
+}
+
+h5,
+.h5 {
+  font-size: $base-h5-font-size;
+  line-height: $base-h5-line-height;
+}
+
+h6,
+.h6 {
+  font-size: $base-h6-font-size;
+  line-height: $base-h6-line-height;
+}
+
+// Preformatted text
+// --------------------------------------------------
+
+pre {
+  font: $base-pre-font-size unquote("/") $base-pre-line-height
+    $base-pre-font-family;
+  color: $base-pre-color;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  overflow: auto;
+}
+
+pre code {
+  font-family: $base-pre-font-family;
+}
