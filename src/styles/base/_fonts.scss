@@ -3,14 +3,35 @@
 // Load custom fonts
 // --------------------------------------------------
 
-// Font
+// Space Grotesk
 // --------------------------------------------------
 
-// @font-face {
-//   font-family: "Example font";
-//   font-style: normal;
-//   font-weight: $font-regular;
-//   font-display: swap;
-//   src: url("ExampleFont-Regular.woff2")
-//     format("woff2");
-// }
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  font-display: swap;
+  src: url("/src/assets/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  font-display: swap;
+  src: url("/src/assets/fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  font-display: swap;
+  src: url("/src/assets/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf")
+    format("truetype");
+}
+
+// Poppins
+// --------------------------------------------------

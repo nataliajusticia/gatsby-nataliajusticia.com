@@ -3,17 +3,20 @@
 // Default values for HTML elements
 // --------------------------------------------------
 
-html {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $base-body-color;
   background-color: $base-background;
-}
-
-body {
-  margin: 0;
 }
 
 // Links
