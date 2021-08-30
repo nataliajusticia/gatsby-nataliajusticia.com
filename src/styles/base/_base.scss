@@ -58,7 +58,12 @@ pre,
 address,
 fieldset,
 figure {
-  margin: 0 0 $base-margin-vertical 0;
+  margin: 0 0 $base-margin-vertical-s 0;
+
+  /* Tablet landscape and bigger */
+  @media #{$medium-up} {
+    margin: 0 0 $base-margin-vertical-m 0;
+  }
 }
 
 /* Add margin if adjacent element */
@@ -70,7 +75,12 @@ figure {
 * + address,
 * + fieldset,
 * + figure {
-  margin-top: $base-margin-vertical;
+  margin-top: $base-margin-vertical-s;
+
+  /* Tablet landscape and bigger */
+  @media #{$medium-up} {
+    margin-top: $base-margin-vertical-m;
+  }
 }
 
 // Headings
@@ -88,10 +98,17 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin: 0 0 $base-margin-vertical 0;
+  margin: 0 0 $base-margin-vertical-s 0;
   font-family: $base-heading-font-family;
   font-weight: $base-heading-font-weight;
   color: $base-heading-color;
+  hyphens: auto;
+  word-wrap: break-word;
+
+  /* Tablet landscape and bigger */
+  @media #{$medium-up} {
+    margin-top: $base-margin-vertical-m;
+  }
 }
 
 /* Add margin if adjacent element */
@@ -107,7 +124,12 @@ h6,
 * + .h5,
 * + h6,
 * + .h6 {
-  margin-top: $base-heading-margin-top;
+  margin-top: $base-heading-margin-top-s;
+
+  /* Tablet landscape and bigger */
+  @media #{$medium-up} {
+    margin-top: $base-heading-margin-top-m;
+  }
 }
 
 /* Sizes */

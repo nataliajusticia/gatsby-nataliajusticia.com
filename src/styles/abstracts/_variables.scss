@@ -37,31 +37,31 @@ $space-m: 24px;
 $space-l: 32px;
 
 /* Used to set margins for basic HTML elements */
-$base-margin-vertical: $space-m;
-$base-heading-margin-top: $space-m;
+$base-margin-vertical-s: $space-s;
+$base-margin-vertical-m: $space-m;
+
+$base-heading-margin-top-s: $space-m;
+$base-heading-margin-top-m: $space-m;
+
+/* Used to set paddings for the containers */
+$container-padding-horizontal-s: $space-s;
+$container-padding-horizontal-m: $space-m;
 
 // Grid breakpoints
 // --------------------------------------------------
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
+$grid-breakpoint-small: 576px;
+$grid-breakpoint-medium: 768px;
+$grid-breakpoint-large: 992px;
+$grid-breakpoint-xlarge: 1200px;
 
 // Grid containers
 // --------------------------------------------------
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
-);
+$container-max-width-small: 540px;
+$container-max-width-medium: 720px;
+$container-max-width-large: 960px;
+$container-max-width-xlarge: 1140px;
 
 // Theme definitions
 // --------------------------------------------------
@@ -73,6 +73,7 @@ $base-font-size: $body-font-size;
 $base-line-height: 1.5;
 $base-body-color: $color-black;
 $base-background: $color-white;
+$container-max-width: $container-max-width-xlarge;
 
 /* Headings */
 $base-heading-font-family: $font-space-grotesk;

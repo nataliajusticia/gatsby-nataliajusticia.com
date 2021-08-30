@@ -1,0 +1,39 @@
+// Mixins
+//
+// Define styles that can be re-used
+// --------------------------------------------------
+
+/* Container */
+@mixin container($max-width) {
+  box-sizing: content-box;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-horizontal-s;
+  padding-right: $container-padding-horizontal-s;
+
+  /* Tablet landscape and bigger */
+  @media #{$medium-up} {
+    padding-left: $container-padding-horizontal-m;
+    padding-right: $container-padding-horizontal-m;
+  }
+}
+
+/* CTA Button */
+@mixin cta-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: $base-font-family;
+  font-weight: $font-weight-black;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  padding-top: 13px;
+  background-image: none;
+  transition: 220ms all ease-in-out;
+}
