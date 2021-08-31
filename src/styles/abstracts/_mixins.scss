@@ -6,6 +6,7 @@
 /* Container */
 @mixin container($max-width) {
   box-sizing: content-box;
+  width: 100%;
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;

@@ -17,6 +17,8 @@ $color-pink: #f8abd8;
 $body-font-size: 16px;
 $font-space-grotesk: "Space Grotesk", sans-serif;
 $font-poppins: "Poppins", sans-serif;
+$font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+  monospace;
 
 $font-weight-thin: 100;
 $font-weight-extra-light: 200;
@@ -102,10 +104,3 @@ $base-link-hover-text-decoration: none;
 /* Text */
 $base-strong-font-weight: $font-weight-bold;
 $base-em-color: $color-black;
-
-/* Code */
-$base-code-font-family: Consolas, monaco, monospace;
-$base-pre-font-size: $base-font-size;
-$base-pre-line-height: 1.5;
-$base-pre-font-family: $base-code-font-family;
-$base-pre-color: $color-pink;

@@ -4,8 +4,8 @@
 // --------------------------------------------------
 
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -50,6 +50,13 @@ small {
   font-size: 80%;
 }
 
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-monospace;
+}
+
 // Block elements
 // --------------------------------------------------
 
@@ -84,6 +91,25 @@ figure {
   @media #{$medium-up} {
     margin-top: $base-margin-vertical-m;
   }
+}
+
+/* Make replaced elements `display: block` by default */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+/* Constrain images and videos to the parent width and preserve */
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 // Headings
@@ -172,18 +198,24 @@ h6,
   line-height: $base-h6-line-height;
 }
 
-// Preformatted text
+// Forms
 // --------------------------------------------------
 
-pre {
-  font: $base-pre-font-size unquote("/") $base-pre-line-height
-    $base-pre-font-family;
-  color: $base-pre-color;
-  -moz-tab-size: 4;
-  tab-size: 4;
-  overflow: auto;
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
 }
 
-pre code {
-  font-family: $base-pre-font-family;
+textarea {
+  resize: vertical;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
 }
