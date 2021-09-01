@@ -3,7 +3,7 @@
 // Import all the components scss files
 // --------------------------------------------------
 
-@import "front-header";
+@import "sections/front-header";
+@import "sections/latest-articles";
 
-@import "latest-articles";
 @import "article/article-teaser";

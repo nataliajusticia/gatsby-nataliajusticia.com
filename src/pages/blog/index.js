@@ -1,28 +1,31 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/common/Layout";
-
-import * as styles from "./blog.module.css";
 
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Blog">
-      <section className="">
+      <section className="blog">
         <div className="container">
-          <h1>All articles</h1>
+          <h1 className="blog__title">{"<All Articles/>"}</h1>
 
-          <ul className={styles.blogList}>
+          <ul className="blog__grid">
             {data.allMdx.nodes.map((node) => (
-              <li key={node.id} className={styles.blogPost}>
-                <h2>
-                  <Link to={`/blog/${node.slug}`}>
+              <li key={node.id}>
+                <Link to={`/blog/${node.slug}`} className="article-teaser">
+                  <GatsbyImage
+                    image={getImage(node.frontmatter.hero_image)}
+                    className="article-teaser__image"
+                  />
+                  <h3 className="article-teaser__title">
                     {node.frontmatter.title}
-                  </Link>
-                </h2>
-                <p className={styles.blogPostDate}>
-                  {node.frontmatter.date} - Natalia J.
-                </p>
+                  </h3>
+                  <p className="article-teaser__date">
+                    {node.frontmatter.date}
+                  </p>
+                </Link>
               </li>
             ))}
           </ul>
@@ -39,6 +42,11 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "MMMM D, YYYY")
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         slug

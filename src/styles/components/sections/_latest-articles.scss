@@ -1,0 +1,32 @@
+// Latest Articles
+//
+
+.latest-articles {
+  margin: 200px 0;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: $space-xxl;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $space-xl;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-xl;
+  }
+
+  @media #{$medium-up} {
+    &__grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

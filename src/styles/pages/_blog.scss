@@ -1,10 +1,9 @@
-// Latest Articles
+// Blog
 //
 
-.latest-articles {
-  margin: 200px 0;
-
+.blog {
   &__title {
+    font-size: 2rem;
     margin-bottom: $space-xxl;
   }
 
@@ -17,15 +16,7 @@
     margin: 0;
   }
 
-  &__button {
-    display: flex;
-    justify-content: center;
-    margin-top: $space-xl;
-  }
-
   @media #{$medium-up} {
-    margin: 260px 0;
-
     &__grid {
       grid-template-columns: 1fr 1fr 1fr;
     }

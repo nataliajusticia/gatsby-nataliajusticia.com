@@ -26,7 +26,7 @@ const LatestArticles = () => {
   return (
     <section className="latest-articles">
       <div className="latest-articles__wrapper container">
-        <h2 className="latest-articles__title">{"<Latest Articles />"}</h2>
+        <h2 className="latest-articles__title">{"<Latest Articles/>"}</h2>
 
         <ul className="latest-articles__grid">
           {data.allMdx.nodes.map((node) => (
