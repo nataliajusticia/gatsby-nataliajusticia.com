@@ -6,7 +6,6 @@
 /* Container */
 @mixin container($max-width) {
   box-sizing: content-box;
-  width: 100%;
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
@@ -25,16 +24,34 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  font-family: $base-font-family;
-  font-weight: $font-weight-black;
+  font-family: $base-heading-font-family;
+  font-weight: $font-weight-bold;
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
-  border-radius: 50px;
-  border: 2px solid transparent;
-  padding: 10px 20px;
-  padding-top: 13px;
+  border: 2px solid $color-black;
+  padding: $space-s $space-m;
   background-image: none;
   transition: 220ms all ease-in-out;
+}
+
+@mixin cta-button--primary {
+  @include cta-button;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+@mixin cta-button--secondary {
+  @include cta-button;
+
+  background-color: $color-black;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+  }
 }

@@ -1,0 +1,37 @@
+// Footer
+//
+
+.footer {
+  color: $color-white;
+  background-color: $color-black;
+  margin-top: auto;
+
+  &__separator {
+    transform: rotate(180deg);
+    margin-bottom: -1px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: $space-xxl;
+    padding-bottom: $space-xxl;
+  }
+
+  &__text {
+    color: $color-white;
+  }
+
+  &__rights {
+    font-size: 0.6rem;
+    margin-top: 0;
+  }
+
+  @media #{$medium-up} {
+    &__wrapper {
+      padding-top: 0;
+      padding-bottom: 112px;
+    }
+  }
+}

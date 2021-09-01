@@ -1,2 +1,2 @@
 // Import styles
-// import "./src/styles/main.scss";
+import "./src/styles/main.scss";

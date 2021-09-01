@@ -2,8 +2,6 @@ import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import * as styles from "./latestarticles.module.css";
-
 const LatestArticles = () => {
   const data = useStaticQuery(graphql`
     {
@@ -26,30 +24,32 @@ const LatestArticles = () => {
   `);
 
   return (
-    <section className={styles.wrapper}>
-      <h2 className={styles.title}>Latest Articles</h2>
+    <section className="latest-articles">
+      <div className="latest-articles__wrapper container">
+        <h2 className="latest-articles__title">{"<Latest Articles />"}</h2>
 
-      <div>
-        <ul className={styles.grid}>
+        <ul className="latest-articles__grid">
           {data.allMdx.nodes.map((node) => (
             <li key={node.id}>
-              <Link to={`/blog/${node.slug}`} className={styles.link}>
+              <Link to={`/blog/${node.slug}`} className="article-teaser">
                 <GatsbyImage
                   image={getImage(node.frontmatter.hero_image)}
-                  className={styles.image}
+                  className="article-teaser__image"
                 />
-                <h3 className={styles.titlePost}>{node.frontmatter.title}</h3>
-                <p className={styles.datePost}>{node.frontmatter.date}</p>
+                <h3 className="article-teaser__title">
+                  {node.frontmatter.title}
+                </h3>
+                <p className="article-teaser__date">{node.frontmatter.date}</p>
               </Link>
             </li>
           ))}
         </ul>
-      </div>
 
-      <div className={styles.btnWrapper}>
-        <Link to="/blog" className="btn-secondary">
-          Read more
-        </Link>
+        <div className="latest-articles__button">
+          <Link to="/blog" className="button">
+            Read more
+          </Link>
+        </div>
       </div>
     </section>
   );

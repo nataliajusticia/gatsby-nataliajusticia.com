@@ -14,7 +14,7 @@ $color-pink: #f8abd8;
 // Typography
 // --------------------------------------------------
 
-$body-font-size: 16px;
+$body-font-size: 20px;
 $font-space-grotesk: "Space Grotesk", sans-serif;
 $font-poppins: "Poppins", sans-serif;
 $font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
@@ -37,6 +37,8 @@ $space-xs: 8px;
 $space-s: 16px;
 $space-m: 24px;
 $space-l: 32px;
+$space-xl: 40px;
+$space-xxl: 48px;
 
 /* Used to set margins for basic HTML elements */
 $base-margin-vertical-s: $space-s;

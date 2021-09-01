@@ -1,0 +1,35 @@
+// Article: Teaser
+//
+
+.article-teaser {
+  &__image {
+    position: relative;
+    height: 200px;
+    box-shadow: $space-xs $space-xs 0 0 $color-green;
+    transition: 220ms box-shadow ease-in-out;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-top: $space-m;
+    text-align: center;
+  }
+
+  &__date {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+
+  &:hover {
+    .article-teaser__image {
+      box-shadow: none;
+    }
+  }
+
+  @media #{$medium-up} {
+    &__image {
+      box-shadow: $space-s $space-s 0 0 $color-green;
+    }
+  }
+}

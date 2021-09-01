@@ -12,6 +12,15 @@
   @include container($container-max-width-large);
 }
 
+/* Buttons */
+.button {
+  @include cta-button--primary;
+}
+
+.button--secondary {
+  @include cta-button--secondary;
+}
+
 /* Hide only visually, but have it available for screen readers */
 .visually-hidden {
   border: 0;

@@ -1,0 +1,24 @@
+// Front Header
+//
+
+.front-header {
+  margin: 200px 0;
+
+  &__title {
+    font-size: 3rem;
+    margin: 40px 0 20px 0;
+  }
+
+  &__subtitle {
+    font-weight: $font-weight-medium;
+  }
+
+  // Responsive styles
+  @media #{$medium-up} {
+    margin: 260px 0;
+
+    &__title {
+      font-size: 4rem;
+    }
+  }
+}

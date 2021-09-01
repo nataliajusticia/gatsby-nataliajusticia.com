@@ -11,8 +11,7 @@
   font-style: normal;
   font-weight: $font-weight-regular;
   font-display: swap;
-  src: url("/src/assets/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf")
-    format("truetype");
+  src: url("../assets/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -20,8 +19,7 @@
   font-style: normal;
   font-weight: $font-weight-medium;
   font-display: swap;
-  src: url("/src/assets/fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf")
-    format("truetype");
+  src: url("../assets/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -29,9 +27,24 @@
   font-style: normal;
   font-weight: $font-weight-bold;
   font-display: swap;
-  src: url("/src/assets/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf")
-    format("truetype");
+  src: url("../assets/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
 }
 
 // Poppins
 // --------------------------------------------------
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+}

@@ -1,0 +1,60 @@
+// Navbar
+//
+
+.header {
+  width: 100%;
+  border-bottom: 2px solid $color-black;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: $space-l;
+    padding-bottom: $space-l;
+  }
+
+  &__logo {
+    transition: 220ms transform ease-in-out;
+
+    a {
+      font-weight: $font-weight-bold;
+      font-family: $base-heading-font-family;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  &__navbar {
+    display: none;
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      padding: 0 20px;
+    }
+
+    a {
+      font-weight: $font-weight-bold;
+      font-family: $base-heading-font-family;
+      text-transform: lowercase;
+      letter-spacing: 0.12em;
+    }
+  }
+
+  // Responsive styles
+  @media #{$medium-up} {
+    &__navbar {
+      display: block;
+    }
+  }
+}
