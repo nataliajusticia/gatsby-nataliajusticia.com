@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 
 const Header = () => {
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <header className="header">
       <div className="header__wrapper container">
@@ -10,7 +14,15 @@ const Header = () => {
         </div>
 
         <nav className="header__navbar">
-          <ul>
+          <button className="header__navbar-btn" onClick={showSidebar}>
+            MENU
+          </button>
+
+          <ul
+            className={
+              sidebar ? "header__navbar-menu is-active" : "header__navbar-menu"
+            }
+          >
             <li>
               <Link to="/">Home</Link>
             </li>
