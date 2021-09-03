@@ -1,7 +1,7 @@
-// Project: Teaser
+// Project
 //
 
-.project-teaser {
+.project {
   &__image {
     position: relative;
     height: 300px;
@@ -20,7 +20,7 @@
   }
 
   &:hover {
-    .project-teaser__image {
+    .project__image {
       box-shadow: none;
     }
   }

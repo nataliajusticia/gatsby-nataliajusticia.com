@@ -1,7 +1,7 @@
-// Article: Teaser
+// Article
 //
 
-.article-teaser {
+.article {
   &__image {
     position: relative;
     height: 200px;
@@ -22,7 +22,7 @@
   }
 
   &:hover {
-    .article-teaser__image {
+    .article__image {
       box-shadow: none;
     }
   }

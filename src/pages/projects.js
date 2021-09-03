@@ -15,29 +15,27 @@ const ProjectsPage = () => {
 
           <ul className="projects__grid">
             <li>
-              <a className="project-teaser">
+              <a className="project">
                 <StaticImage
                   src="../assets/images/vue-pokedex.png"
                   width={width}
                   height={height}
-                  className="project-teaser__image"
+                  className="project__image"
                 />
-                <h3 className="project-teaser__title">vue-pokedex</h3>
-                <p className="project-teaser__date">
-                  Pokedex built with Vue.js (pwa)
-                </p>
+                <h3 className="project__title">vue-pokedex</h3>
+                <p className="project__date">Pokedex built with Vue.js (pwa)</p>
               </a>
             </li>
             <li>
-              <a className="project-teaser">
+              <a className="project">
                 <StaticImage
                   src="../assets/images/uocify.png"
                   width={width}
                   height={height}
-                  className="project-teaser__image"
+                  className="project__image"
                 />
-                <h3 className="project-teaser__title">uocify</h3>
-                <p className="project-teaser__date">
+                <h3 className="project__title">uocify</h3>
+                <p className="project__date">
                   Deezer client built with Vue.js (pwa)
                 </p>
               </a>

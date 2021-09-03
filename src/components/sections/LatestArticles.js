@@ -31,15 +31,13 @@ const LatestArticles = () => {
         <ul className="latest-articles__grid">
           {data.allMdx.nodes.map((node) => (
             <li key={node.id}>
-              <Link to={`/blog/${node.slug}`} className="article-teaser">
+              <Link to={`/blog/${node.slug}`} className="article">
                 <GatsbyImage
                   image={getImage(node.frontmatter.hero_image)}
-                  className="article-teaser__image"
+                  className="article__image"
                 />
-                <h3 className="article-teaser__title">
-                  {node.frontmatter.title}
-                </h3>
-                <p className="article-teaser__date">{node.frontmatter.date}</p>
+                <h3 className="article__title">{node.frontmatter.title}</h3>
+                <p className="article__date">{node.frontmatter.date}</p>
               </Link>
             </li>
           ))}
