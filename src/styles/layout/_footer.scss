@@ -4,11 +4,11 @@
 .footer {
   color: $color-white;
   background-color: $color-black;
-  margin-top: auto;
 
   &__separator {
     transform: rotate(180deg);
     margin-bottom: -1px;
+    margin-top: auto;
   }
 
   &__wrapper {

@@ -1,0 +1,33 @@
+// Blogpost
+//
+
+.blogpost {
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__date {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  &__image {
+    margin-top: $space-s;
+    margin-bottom: $space-s;
+
+    .gatsby-image-wrapper-constrained {
+      display: block !important;
+    }
+  }
+
+  @media #{$medium-up} {
+    &__title {
+      font-size: 5rem;
+    }
+    &__image {
+      margin-top: $space-xl;
+      margin-bottom: $space-xl;
+    }
+  }
+}

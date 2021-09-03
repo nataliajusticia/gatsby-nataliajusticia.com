@@ -1,0 +1,33 @@
+// Project: Teaser
+//
+
+.project-teaser {
+  &__image {
+    position: relative;
+    height: 300px;
+    box-shadow: $space-xs $space-xs 0 0 $color-pink;
+    transition: 220ms box-shadow ease-in-out;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-top: $space-m;
+  }
+
+  &__date {
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+
+  &:hover {
+    .project-teaser__image {
+      box-shadow: none;
+    }
+  }
+
+  @media #{$medium-up} {
+    &__image {
+      box-shadow: $space-s $space-s 0 0 $color-pink;
+    }
+  }
+}

@@ -32,7 +32,7 @@
   border: 2px solid $color-black;
   padding: $space-s $space-m;
   background-image: none;
-  transition: 220ms all ease-in-out;
+  transition: 220ms background-color ease-in-out;
 }
 
 @mixin cta-button--primary {

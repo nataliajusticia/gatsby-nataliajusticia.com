@@ -15,7 +15,17 @@ const Header = () => {
 
         <nav className="header__navbar">
           <button className="header__navbar-btn" onClick={showSidebar}>
-            MENU
+            <div
+              className={
+                sidebar
+                  ? "hamburger hamburger--spin is-active"
+                  : "hamburger hamburger--spin"
+              }
+            >
+              <div className="hamburger-box">
+                <div className="hamburger-inner"></div>
+              </div>
+            </div>
           </button>
 
           <ul
@@ -28,6 +38,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
               <a
