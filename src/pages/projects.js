@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
+import SEO from "../components/common/Seo";
 import Layout from "../components/common/Layout";
 
 const ProjectsPage = ({ data }) => {
@@ -8,7 +9,12 @@ const ProjectsPage = ({ data }) => {
   const height = (width * 9) / 16;
 
   return (
-    <Layout pageTitle="Projects">
+    <Layout>
+      <SEO
+        title="Projects"
+        description="This is the projects page. Here you will find all the projects that I have done"
+      />
+
       <section className="projects">
         <div className="container">
           <h1 className="projects__title">{"<All Projects/>"}</h1>
@@ -18,7 +24,7 @@ const ProjectsPage = ({ data }) => {
               <li key={node.id}>
                 <a
                   href={node.frontmatter.url}
-                  rel="nofollow"
+                  rel="noreferrer"
                   target="_blank"
                   className="project"
                 >

@@ -48,7 +48,7 @@ const LatestArticles = () => {
         </ul>
 
         <div className="latest-articles__button">
-          <Link to="/blog" className="button">
+          <Link to="/blog" className="button" aria-label="View blog page">
             Read more
           </Link>
         </div>

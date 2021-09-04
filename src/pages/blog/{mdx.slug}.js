@@ -3,11 +3,17 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
+import SEO from "../../components/common/Seo";
 import Layout from "../../components/common/Layout";
 
 const BlogPostPage = ({ data }) => {
   return (
-    <Layout pageTitle="Super Cool Blog Posts">
+    <Layout>
+      <SEO
+        title={data.mdx.frontmatter.title}
+        description="This is a blogpost"
+      />
+
       <div className="blogpost">
         <div className="blogpost__header container-small">
           <h1 className="blogpost__title">{data.mdx.frontmatter.title}</h1>

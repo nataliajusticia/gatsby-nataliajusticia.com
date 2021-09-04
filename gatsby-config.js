@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.nataliajusticia.com",
-    title: "NJ - Site",
+    title: "NJ",
+    description: "I'm Natalia, a frontend developer that loves to code.",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -26,5 +27,6 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
   ],
 };

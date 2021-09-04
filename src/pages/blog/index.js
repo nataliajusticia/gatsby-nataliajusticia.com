@@ -2,11 +2,17 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+import SEO from "../../components/common/Seo";
 import Layout from "../../components/common/Layout";
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="Blog">
+    <Layout>
+      <SEO
+        title="Blog"
+        description="This is the blog page. Here you will find all the articles that I have wrote"
+      />
+
       <section className="blog">
         <div className="container">
           <h1 className="blog__title">{"<All Articles/>"}</h1>
