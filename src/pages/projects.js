@@ -1,9 +1,9 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
 import Layout from "../components/common/Layout";
 
-const ProjectsPage = () => {
+const ProjectsPage = ({ data }) => {
   const width = 1200;
   const height = (width * 9) / 16;
 
@@ -14,37 +14,48 @@ const ProjectsPage = () => {
           <h1 className="projects__title">{"<All Projects/>"}</h1>
 
           <ul className="projects__grid">
-            <li>
-              <a className="project">
-                <StaticImage
-                  src="../assets/images/vue-pokedex.png"
-                  width={width}
-                  height={height}
-                  className="project__image"
-                />
-                <h3 className="project__title">vue-pokedex</h3>
-                <p className="project__date">Pokedex built with Vue.js (pwa)</p>
-              </a>
-            </li>
-            <li>
-              <a className="project">
-                <StaticImage
-                  src="../assets/images/uocify.png"
-                  width={width}
-                  height={height}
-                  className="project__image"
-                />
-                <h3 className="project__title">uocify</h3>
-                <p className="project__date">
-                  Deezer client built with Vue.js (pwa)
-                </p>
-              </a>
-            </li>
+            {data.allMdx.nodes.map((node) => (
+              <li key={node.id}>
+                <a
+                  href={node.frontmatter.url}
+                  rel="nofollow"
+                  target="_blank"
+                  className="project"
+                >
+                  <h3 className="project__title">{node.frontmatter.title}</h3>
+                  <p className="project__date">
+                    {node.frontmatter.description}
+                  </p>
+                  <p className="project__date">{node.frontmatter.tag}</p>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
     </Layout>
   );
 };
+
+export const query = graphql`
+  query ProjectList {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fields: { sourceName: { eq: "project" } } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          date(formatString: "MMMM D, YYYY")
+          description
+          url
+          tag
+        }
+        id
+        slug
+      }
+    }
+  }
+`;
 
 export default ProjectsPage;

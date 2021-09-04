@@ -33,7 +33,10 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
   query BlogList {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fields: { sourceName: { eq: "blog" } } }
+    ) {
       nodes {
         frontmatter {
           title

@@ -5,7 +5,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const LatestArticles = () => {
   const data = useStaticQuery(graphql`
     {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 6) {
+      allMdx(
+        sort: { fields: frontmatter___date, order: DESC }
+        limit: 6
+        filter: { fields: { sourceName: { eq: "blog" } } }
+      ) {
         nodes {
           frontmatter {
             title
