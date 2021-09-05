@@ -1,8 +1,8 @@
-// Projects
+// Latest Projects
 //
 
-.projects {
-  margin-bottom: 100px;
+.latest-projects {
+  margin: 200px 0;
 
   &__title {
     font-size: 2rem;
@@ -18,15 +18,9 @@
     margin: 0;
   }
 
-  @media #{$medium-up} {
-    &__grid {
-      grid-template-columns: 1fr 1fr;
-
-      li {
-        &:nth-child(even) {
-          margin-top: $space-xl;
-        }
-      }
-    }
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-xl;
   }
 }

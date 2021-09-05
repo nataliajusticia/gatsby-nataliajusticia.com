@@ -4,6 +4,7 @@ import SEO from "../components/common/Seo";
 import Layout from "../components/common/Layout";
 import FrontHeader from "../components/sections/FrontHeader";
 import LatestArticles from "../components/sections/LatestArticles";
+import LatestProjects from "../components/sections/LatestProjects";
 
 const IndexPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = () => {
 
       <FrontHeader />
       <LatestArticles />
+      <LatestProjects />
     </Layout>
   );
 };

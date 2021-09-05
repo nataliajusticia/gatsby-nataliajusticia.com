@@ -10,7 +10,7 @@ const Header = () => {
     <header className="header">
       <div className="header__wrapper container">
         <div className="header__logo">
-          <Link to="/">{"<nj />"}.</Link>
+          <Link to="/">{"<nj />"}</Link>
         </div>
 
         <nav className="header__navbar">

@@ -47,3 +47,30 @@
     }
   }
 }
+
+.project-small {
+  display: block;
+  padding: $space-s;
+  border: 2px solid $color-black;
+  box-shadow: $space-xs $space-xs 0 0 $color-pink;
+  transition: 220ms box-shadow ease-in-out;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: $space-xs;
+  }
+
+  &__description {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  @media #{$medium-up} {
+    box-shadow: $space-s $space-s 0 0 $color-pink;
+  }
+}
