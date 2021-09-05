@@ -36,7 +36,7 @@ const ProjectsPage = ({ data }) => {
                     height={height}
                   />
                   <h3 className="project__title">{node.frontmatter.title}</h3>
-                  <p className="project__date">
+                  <p className="project__description">
                     {node.frontmatter.description}
                   </p>
                   <div className="project__tags">
