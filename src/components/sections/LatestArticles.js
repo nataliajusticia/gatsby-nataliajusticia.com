@@ -49,7 +49,7 @@ const LatestArticles = () => {
 
         <div className="latest-articles__button">
           <Link to="/blog" className="button" aria-label="View blog page">
-            Read more
+            Read more articles
           </Link>
         </div>
       </div>

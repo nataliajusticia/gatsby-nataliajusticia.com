@@ -5,6 +5,7 @@
   &__image {
     position: relative;
     height: 200px;
+    border: 2px solid $color-black;
     box-shadow: $space-xs $space-xs 0 0 $color-green;
     transition: 220ms box-shadow ease-in-out;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import SEO from "../components/common/Seo";
 import Layout from "../components/common/Layout";
@@ -28,11 +29,21 @@ const ProjectsPage = ({ data }) => {
                   target="_blank"
                   className="project"
                 >
+                  <GatsbyImage
+                    image={getImage(node.frontmatter.hero_image)}
+                    className="project__image"
+                    width={width}
+                    height={height}
+                  />
                   <h3 className="project__title">{node.frontmatter.title}</h3>
                   <p className="project__date">
                     {node.frontmatter.description}
                   </p>
-                  <p className="project__date">{node.frontmatter.tag}</p>
+                  <div className="project__tags">
+                    {node.frontmatter.tags.map((tag) => (
+                      <span className="tag">{tag}</span>
+                    ))}
+                  </div>
                 </a>
               </li>
             ))}
@@ -53,9 +64,14 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "MMMM D, YYYY")
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
           description
           url
-          tag
+          tags
         }
         id
         slug
