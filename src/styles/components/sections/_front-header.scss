@@ -5,8 +5,16 @@
   margin: 100px 0 200px 0;
 
   &__title {
-    font-size: 2rem;
-    margin: 40px 0 20px 0;
+    font-size: 2.7rem;
+    margin: 0;
+    margin-bottom: $space-m;
+
+    span {
+      color: $color-white;
+      text-shadow: 2px 2px 0 $color-black;
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: $color-black;
+    }
   }
 
   &__subtitle {
@@ -15,10 +23,13 @@
 
   // Responsive styles
   @media #{$medium-up} {
-    margin: 200px 0;
-
     &__title {
       font-size: 4rem;
+
+      span {
+        text-shadow: 4px 4px 0 $color-black;
+        -webkit-text-stroke-width: 2px;
+      }
     }
   }
 }

@@ -5,9 +5,8 @@
   &__image {
     position: relative;
     height: 200px;
-    border: 2px solid $color-black;
-    box-shadow: $space-xs $space-xs 0 0 $color-green;
-    transition: 220ms box-shadow ease-in-out;
+    border: 2px solid transparent;
+    transition: 220ms box-shadow ease-in-out, 220ms border ease-in-out;
   }
 
   &__title {
@@ -24,13 +23,26 @@
 
   &:hover {
     .article__image {
-      box-shadow: none;
+      border: 2px solid $color-black;
+      box-shadow: 6px 6px 0 0 $color-black;
     }
   }
+}
 
-  @media #{$medium-up} {
-    &__image {
-      box-shadow: $space-s $space-s 0 0 $color-green;
-    }
+.article-small {
+  &__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  &__date {
+    color: $color-grey;
+    font-size: 0.7rem;
+    margin: 0;
   }
 }

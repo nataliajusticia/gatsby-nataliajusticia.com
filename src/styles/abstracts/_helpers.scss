@@ -21,6 +21,21 @@
   @include cta-button--secondary;
 }
 
+/* Links */
+.link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  transition: background-size 0.3s, color 0.3s ease;
+  line-height: 1.2;
+  font-weight: $font-weight-bold;
+
+  &:hover {
+    background-size: 0% 2px;
+  }
+}
+
 /* Hide only visually, but have it available for screen readers */
 .visually-hidden {
   border: 0;

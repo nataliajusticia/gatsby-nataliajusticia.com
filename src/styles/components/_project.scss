@@ -6,7 +6,6 @@
     position: relative;
     height: 300px;
     border: 2px solid $color-black;
-    box-shadow: $space-xs $space-xs 0 0 $color-pink;
     transition: 220ms box-shadow ease-in-out;
   }
 
@@ -34,43 +33,51 @@
       font-size: 12px;
     }
   }
-
-  &:hover {
-    .project__image {
-      box-shadow: none;
-    }
-  }
-
-  @media #{$medium-up} {
-    &__image {
-      box-shadow: $space-s $space-s 0 0 $color-pink;
-    }
-  }
 }
 
 .project-small {
+  position: relative;
   display: block;
-  padding: $space-s;
-  border: 2px solid $color-black;
-  box-shadow: $space-xs $space-xs 0 0 $color-pink;
-  transition: 220ms box-shadow ease-in-out;
+
+  &__image {
+    position: relative;
+    height: 500px;
+    border-radius: $space-xs;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: $color-black;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      z-index: 1;
+    }
+  }
+
+  &__info {
+    z-index: 2;
+    position: absolute;
+    bottom: $space-m;
+    left: $space-m;
+  }
 
   &__title {
+    color: $color-white;
     font-size: 1.5rem;
-    margin-top: 0;
     margin-bottom: $space-xs;
   }
 
   &__description {
+    color: $color-white;
     font-size: 0.7rem;
     margin: 0;
-  }
-
-  &:hover {
-    box-shadow: none;
-  }
-
-  @media #{$medium-up} {
-    box-shadow: $space-s $space-s 0 0 $color-pink;
   }
 }

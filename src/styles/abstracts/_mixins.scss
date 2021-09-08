@@ -30,7 +30,8 @@
   text-transform: uppercase;
   line-height: 1;
   border: 2px solid $color-black;
-  padding: $space-s $space-m;
+  border-radius: $space-xs;
+  padding: $space-s $space-s;
   background-image: none;
   transition: 220ms background-color ease-in-out;
 }

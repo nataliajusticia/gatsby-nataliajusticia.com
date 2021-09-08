@@ -22,6 +22,7 @@ const LatestArticles = () => {
           }
           id
           slug
+          timeToRead
         }
       }
     }
@@ -30,28 +31,35 @@ const LatestArticles = () => {
   return (
     <section className="latest-articles">
       <div className="latest-articles__wrapper container">
-        <h2 className="latest-articles__title">{"<Latest Articles/>"}</h2>
+        <div className="latest-articles__header">
+          <h2 className="latest-articles__title">{"✏️ <Latest Articles/>"}</h2>
+
+          <Link to="/blog" className="link" aria-label="View blog page">
+            Read more
+          </Link>
+        </div>
 
         <ul className="latest-articles__grid">
           {data.allMdx.nodes.map((node) => (
-            <li key={node.id}>
-              <Link to={`/blog/${node.slug}`} className="article">
-                <GatsbyImage
-                  image={getImage(node.frontmatter.hero_image)}
-                  className="article__image"
-                />
-                <h3 className="article__title">{node.frontmatter.title}</h3>
-                <p className="article__date">{node.frontmatter.date}</p>
-              </Link>
+            <li key={node.id} className="article-small">
+              <GatsbyImage
+                image={getImage(node.frontmatter.hero_image)}
+                className="article-small__image"
+              />
+
+              <div>
+                <Link to={`/blog/${node.slug}`}>
+                  <h3 className="article-small__title">
+                    {node.frontmatter.title}
+                  </h3>
+                </Link>
+                <p className="article-small__date">
+                  {node.frontmatter.date} - {node.timeToRead} min.
+                </p>
+              </div>
             </li>
           ))}
         </ul>
-
-        <div className="latest-articles__button">
-          <Link to="/blog" className="button" aria-label="View blog page">
-            Read more articles
-          </Link>
-        </div>
       </div>
     </section>
   );
