@@ -4,20 +4,10 @@
 .latest-articles {
   margin: 200px 0;
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: $space-xxl;
-
-    a {
-      display: none;
-    }
-  }
-
   &__title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     margin: 0;
+    margin-bottom: $space-xxl;
   }
 
   &__grid {
@@ -39,13 +29,5 @@
     display: flex;
     justify-content: center;
     margin-top: $space-xl;
-  }
-
-  @media #{$medium-up} {
-    &__header {
-      a {
-        display: block;
-      }
-    }
   }
 }

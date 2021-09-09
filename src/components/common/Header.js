@@ -34,25 +34,30 @@ const Header = () => {
             }
           >
             <li>
-              <Link to="/" aria-label="Go to homepage">
+              <Link to="/" aria-label="Go to homepage" activeClassName="active">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/blog" aria-label="View blog page">
+              <Link
+                to="/blog"
+                aria-label="View blog page"
+                activeClassName="active"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/projects" aria-label="View projects page">
+              <Link
+                to="/projects"
+                aria-label="View projects page"
+                activeClassName="active"
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <a
-                href="mailto:nataliajusticia@gmail.com"
-                className="button--secondary"
-              >
+              <a href="mailto:nataliajusticia@gmail.com" className="button">
                 Contact
               </a>
             </li>

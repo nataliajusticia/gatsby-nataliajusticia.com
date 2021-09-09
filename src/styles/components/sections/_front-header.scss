@@ -2,7 +2,7 @@
 //
 
 .front-header {
-  margin: 100px 0 200px 0;
+  margin: 0 0 200px 0;
 
   &__title {
     font-size: 2.7rem;
@@ -10,10 +10,10 @@
     margin-bottom: $space-m;
 
     span {
-      color: $color-white;
-      text-shadow: 2px 2px 0 $color-black;
-      -webkit-text-stroke-width: 1.5px;
-      -webkit-text-stroke-color: $color-black;
+      color: $color-black;
+      background-color: $color-wheat;
+      padding: 0 $space-s;
+      border-radius: $space-xs;
     }
   }
 
@@ -23,13 +23,14 @@
 
   // Responsive styles
   @media #{$medium-up} {
-    &__title {
-      font-size: 4rem;
+    margin: 100px 0 200px 0;
 
-      span {
-        text-shadow: 4px 4px 0 $color-black;
-        -webkit-text-stroke-width: 2px;
-      }
+    &__title {
+      font-size: 4.5rem;
+    }
+
+    &__subtitle {
+      max-width: 50%;
     }
   }
 }

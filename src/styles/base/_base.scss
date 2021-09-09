@@ -20,6 +20,8 @@ html {
 
 body {
   margin: 0;
+  background-image: radial-gradient($color-wheat 0.5px, transparent 0.5px);
+  background-size: calc(10 * 0.5px) calc(10 * 0.5px);
 }
 
 // Links

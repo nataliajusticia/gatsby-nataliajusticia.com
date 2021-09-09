@@ -3,7 +3,6 @@
 
 .header {
   width: 100%;
-  border-bottom: 2px solid $color-black;
 
   &__wrapper {
     display: flex;
@@ -140,7 +139,7 @@
     top: 0;
     left: -100%;
     background-color: $color-black;
-    z-index: 1;
+    z-index: 5;
     transition: 850ms left;
 
     li {
@@ -156,7 +155,7 @@
       text-transform: lowercase;
       letter-spacing: 0.12em;
 
-      &.button--secondary {
+      &.button {
         display: none;
       }
     }
@@ -188,12 +187,9 @@
 
       a {
         font-size: 1rem;
+        color: $color-black;
 
-        &:not(.button--secondary) {
-          color: $color-black;
-        }
-
-        &.button--secondary {
+        &.button {
           display: block;
         }
       }

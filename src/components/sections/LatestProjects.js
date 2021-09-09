@@ -32,7 +32,7 @@ const LatestArticles = () => {
   return (
     <section className="latest-projects">
       <div className="latest-projects__wrapper container">
-        <h2 className="latest-projects__title">{"👩🏻‍💻 <Latest Projects/>"}</h2>
+        <h2 className="latest-projects__title">{"<Latest Projects/>"}</h2>
 
         <ul className="latest-projects__grid">
           {data.allMdx.nodes.map((node) => (

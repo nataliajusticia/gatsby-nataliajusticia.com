@@ -5,14 +5,13 @@ const FrontHeader = () => {
     <section className="front-header">
       <div className="front-header__wrapper container">
         <h1 className="front-header__title">
-          I’m Natalia, a <span>frontend&nbsp;dev</span>
-          <br /> that loves to code.
+          I’m natalia, a <span>frontend&nbsp;dev</span>
+          <br /> that loves to code
         </h1>
 
         <p className="front-header__subtitle">
-          I love my profession and the possibility to be free doing what I like.
-          I have found my passion and I work hard to keep working as what I
-          love.
+          👋 I love my profession and the possibility to be free doing what I
+          like.
         </p>
       </div>
     </section>

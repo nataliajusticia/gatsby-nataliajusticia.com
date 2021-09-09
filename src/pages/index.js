@@ -15,8 +15,8 @@ const IndexPage = () => {
       />
 
       <FrontHeader />
-      <LatestArticles />
       <LatestProjects />
+      <LatestArticles />
     </Layout>
   );
 };

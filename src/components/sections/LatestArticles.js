@@ -31,13 +31,7 @@ const LatestArticles = () => {
   return (
     <section className="latest-articles">
       <div className="latest-articles__wrapper container">
-        <div className="latest-articles__header">
-          <h2 className="latest-articles__title">{"✏️ <Latest Articles/>"}</h2>
-
-          <Link to="/blog" className="link" aria-label="View blog page">
-            Read more
-          </Link>
-        </div>
+        <h2 className="latest-articles__title">{"<Latest Articles/>"}</h2>
 
         <ul className="latest-articles__grid">
           {data.allMdx.nodes.map((node) => (
