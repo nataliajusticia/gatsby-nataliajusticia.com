@@ -6,7 +6,7 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.8rem;
   margin-bottom: var.$space-xxl;
 }
 
@@ -17,10 +17,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
 
-@media #{var.$medium-up} {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr;
+  li {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: var.$space-m;
   }
 }

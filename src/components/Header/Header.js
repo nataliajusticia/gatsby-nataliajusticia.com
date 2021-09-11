@@ -64,14 +64,6 @@ const Header = () => {
                 Projects
               </Link>
             </li>
-            <li>
-              <a
-                href="mailto:nataliajusticia@gmail.com"
-                className={styles.button}
-              >
-                Contact
-              </a>
-            </li>
           </ul>
         </nav>
       </div>

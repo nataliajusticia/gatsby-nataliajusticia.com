@@ -1,0 +1,56 @@
+// Project
+//
+
+.project {
+  position: relative;
+  display: block;
+}
+
+.image {
+  position: relative;
+  height: 500px;
+  border-radius: var.$space-xs;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: var.$color-black;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+}
+
+.info {
+  z-index: 2;
+  position: absolute;
+  bottom: var.$space-s;
+  left: var.$space-s;
+}
+
+.title {
+  color: var.$color-white;
+  font-size: 2.5rem;
+  margin-bottom: var.$space-xs;
+}
+
+.description {
+  color: var.$color-white;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+@media #{var.$medium-up} {
+  .info {
+    bottom: -#{var.$space-m};
+    left: -#{var.$space-m};
+  }
+}

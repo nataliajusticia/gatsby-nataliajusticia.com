@@ -150,10 +150,6 @@
     font-family: var.$base-heading-font-family;
     text-transform: lowercase;
     letter-spacing: 0.12em;
-
-    &.button {
-      display: none;
-    }
   }
 
   &.navbarMenuActive {
@@ -183,10 +179,6 @@
     a {
       font-size: 1rem;
       color: var.$color-black;
-
-      &.button {
-        display: block;
-      }
     }
   }
 }

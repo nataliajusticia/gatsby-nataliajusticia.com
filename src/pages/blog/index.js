@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout/Layout";
+
+import Article from "../../components/Article/Article";
 
 import * as styles from "./blog.module.scss";
 
@@ -22,14 +22,13 @@ const BlogPage = ({ data }) => {
           <ul className={styles.grid}>
             {data.allMdx.nodes.map((node) => (
               <li key={node.id}>
-                <Link to={`/blog/${node.slug}`} className="article">
-                  <GatsbyImage
-                    image={getImage(node.frontmatter.hero_image)}
-                    className="article__image"
-                  />
-                  <h3 className="article__title">{node.frontmatter.title}</h3>
-                  <p className="article__date">{node.frontmatter.date}</p>
-                </Link>
+                <Article
+                  title={node.frontmatter.title}
+                  date={node.frontmatter.date}
+                  timeToRead={node.timeToRead}
+                  url={node.slug}
+                  heroImage={node.frontmatter.hero_image}
+                />
               </li>
             ))}
           </ul>

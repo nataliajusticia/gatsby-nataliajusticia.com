@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
+
+import Article from "../Article/Article";
 
 import * as styles from "./latestArticles.module.scss";
 
@@ -37,22 +38,14 @@ const LatestArticles = () => {
 
         <ul className={styles.grid}>
           {data.allMdx.nodes.map((node) => (
-            <li key={node.id} className="article-small">
-              <GatsbyImage
-                image={getImage(node.frontmatter.hero_image)}
-                className="article-small__image"
+            <li key={node.id}>
+              <Article
+                title={node.frontmatter.title}
+                date={node.frontmatter.date}
+                timeToRead={node.timeToRead}
+                url={node.slug}
+                heroImage={node.frontmatter.hero_image}
               />
-
-              <div>
-                <Link to={`/blog/${node.slug}`}>
-                  <h3 className="article-small__title">
-                    {node.frontmatter.title}
-                  </h3>
-                </Link>
-                <p className="article-small__date">
-                  {node.frontmatter.date} - {node.timeToRead} min.
-                </p>
-              </div>
             </li>
           ))}
         </ul>
