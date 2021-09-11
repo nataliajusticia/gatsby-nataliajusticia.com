@@ -2,8 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import SEO from "../components/common/Seo";
-import Layout from "../components/common/Layout";
+import Seo from "../components/Seo";
+import Layout from "../components/Layout/Layout";
+
+import * as styles from "./projects.module.scss";
 
 const ProjectsPage = ({ data }) => {
   const width = 1200;
@@ -11,16 +13,16 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Projects"
         description="This is the projects page. Here you will find all the projects that I have done"
       />
 
-      <section className="projects">
-        <div className="container">
-          <h1 className="projects__title">{"<All Projects/>"}</h1>
+      <section className={styles.section}>
+        <div className={`container`}>
+          <h1 className={styles.title}>{"<All Projects/>"}</h1>
 
-          <ul className="projects__grid">
+          <ul className={styles.grid}>
             {data.allMdx.nodes.map((node) => (
               <li key={node.id}>
                 <a

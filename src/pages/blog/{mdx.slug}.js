@@ -3,35 +3,38 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import SEO from "../../components/common/Seo";
-import Layout from "../../components/common/Layout";
+import Seo from "../../components/Seo";
+import Layout from "../../components/Layout/Layout";
+
+import * as styles from "./blogpost.module.scss";
 
 const BlogPostPage = ({ data }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title={data.mdx.frontmatter.title}
         description="This is a blogpost"
       />
 
-      <div className="blogpost">
-        <div className="blogpost__header container-small">
-          <h1 className="blogpost__title">{data.mdx.frontmatter.title}</h1>
-          <p className="blogpost__date">{data.mdx.frontmatter.date}</p>
+      <article className={styles.article}>
+        <div className={`container-small`}>
+          <h1 className={styles.title}>{data.mdx.frontmatter.title}</h1>
+          <p className={styles.date}>{data.mdx.frontmatter.date}</p>
         </div>
 
-        <div className="blogpost__image container">
+        <div className={`${styles.imageWrapper} container`}>
           <GatsbyImage
             image={getImage(data.mdx.frontmatter.hero_image)}
             width={1200}
             aspectRatio={4 / 3}
+            className={styles.image}
           />
         </div>
 
-        <div className="blogpost__content container-small">
+        <div className={`container-small`}>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
-      </div>
+      </article>
     </Layout>
   );
 };

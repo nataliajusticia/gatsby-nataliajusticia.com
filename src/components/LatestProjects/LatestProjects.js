@@ -2,7 +2,9 @@ import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const LatestArticles = () => {
+import * as styles from "./latestProjects.module.scss";
+
+const LatestProjects = () => {
   const data = useStaticQuery(graphql`
     {
       allMdx(
@@ -30,11 +32,11 @@ const LatestArticles = () => {
   `);
 
   return (
-    <section className="latest-projects">
-      <div className="latest-projects__wrapper container">
-        <h2 className="latest-projects__title">{"<Latest Projects/>"}</h2>
+    <section className={styles.section}>
+      <div className={`container`}>
+        <h2 className={styles.title}>{"<Latest Projects/>"}</h2>
 
-        <ul className="latest-projects__grid">
+        <ul className={styles.grid}>
           {data.allMdx.nodes.map((node) => (
             <li key={node.id}>
               <a
@@ -61,7 +63,7 @@ const LatestArticles = () => {
           ))}
         </ul>
 
-        <div className="latest-projects__button">
+        <div className={styles.button}>
           <Link
             to="/projects"
             className="button--secondary"
@@ -75,4 +77,4 @@ const LatestArticles = () => {
   );
 };
 
-export default LatestArticles;
+export default LatestProjects;

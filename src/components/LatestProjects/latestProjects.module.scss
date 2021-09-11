@@ -1,0 +1,43 @@
+// Latest Projects
+//
+
+.section {
+  padding: 100px 0;
+  background: var.$color-black;
+}
+
+.title {
+  color: var.$color-white;
+  font-size: 2.8rem;
+  margin-bottom: var.$space-xxl;
+}
+
+.grid {
+  display: grid;
+  gap: var.$space-s;
+  grid-template-columns: 1fr;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+@media #{var.$medium-up} {
+  .title {
+    margin-bottom: 100px;
+  }
+
+  .grid {
+    gap: 100px;
+    grid-template-columns: 1fr 1fr;
+
+    li:nth-child(2n) {
+      transform: translateY(-100px);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Projects
+//
+
+.section {
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: var.$space-xxl;
+}
+
+.grid {
+  display: grid;
+  gap: var.$space-xl;
+  grid-template-columns: 1fr;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media #{var.$medium-up} {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      &:nth-child(even) {
+        margin-top: var.$space-xl;
+      }
+    }
+  }
+}

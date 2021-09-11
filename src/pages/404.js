@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import SEO from "../components/common/Seo";
-import Layout from "../components/common/Layout";
+import Seo from "../components/Seo";
+import Layout from "../components/Layout/Layout";
 
 const NotFoundPage = () => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Not Found"
         description="I'm Natalia, a frontend developer that loves to code"
       />

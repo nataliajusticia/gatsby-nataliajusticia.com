@@ -2,22 +2,24 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import SEO from "../../components/common/Seo";
-import Layout from "../../components/common/Layout";
+import Seo from "../../components/Seo";
+import Layout from "../../components/Layout/Layout";
+
+import * as styles from "./blog.module.scss";
 
 const BlogPage = ({ data }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Blog"
         description="This is the blog page. Here you will find all the articles that I have wrote"
       />
 
-      <section className="blog">
-        <div className="container">
-          <h1 className="blog__title">{"<All Articles/>"}</h1>
+      <section className={styles.section}>
+        <div className={`container`}>
+          <h1 className={styles.title}>{"<All Articles/>"}</h1>
 
-          <ul className="blog__grid">
+          <ul className={styles.grid}>
             {data.allMdx.nodes.map((node) => (
               <li key={node.id}>
                 <Link to={`/blog/${node.slug}`} className="article">

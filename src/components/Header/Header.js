@@ -1,40 +1,48 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 
+import * as styles from "./header.module.scss";
+
 const Header = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <header className="header">
-      <div className="header__wrapper container">
-        <div className="header__logo">
+    <header className={styles.header}>
+      <div className={`${styles.wrapper} container`}>
+        <div className={styles.logo}>
           <Link to="/">{"<nj />"}</Link>
         </div>
 
-        <nav className="header__navbar">
-          <button className="header__navbar-btn" onClick={showSidebar}>
+        <nav>
+          <button className={styles.navbarButton} onClick={showSidebar}>
             <div
               className={
                 sidebar
-                  ? "hamburger hamburger--spin is-active"
-                  : "hamburger hamburger--spin"
+                  ? `${styles.hamburger} ${styles.hamburgerActive}`
+                  : `${styles.hamburger}`
               }
             >
-              <div className="hamburger-box">
-                <div className="hamburger-inner"></div>
+              <div className={styles.hamburgerBox}>
+                <div className={styles.hamburgerInner}></div>
               </div>
             </div>
           </button>
 
           <ul
             className={
-              sidebar ? "header__navbar-menu is-active" : "header__navbar-menu"
+              sidebar
+                ? `${styles.navbarMenu} ${styles.navbarMenuActive}`
+                : `${styles.navbarMenu}`
             }
           >
             <li>
-              <Link to="/" aria-label="Go to homepage" activeClassName="active">
+              <Link
+                to="/"
+                aria-label="Go to homepage"
+                activeClassName={`active`}
+              >
                 Home
               </Link>
             </li>
@@ -42,7 +50,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 aria-label="View blog page"
-                activeClassName="active"
+                activeClassName={`active`}
               >
                 Blog
               </Link>
@@ -51,13 +59,16 @@ const Header = () => {
               <Link
                 to="/projects"
                 aria-label="View projects page"
-                activeClassName="active"
+                activeClassName={`active`}
               >
                 Projects
               </Link>
             </li>
             <li>
-              <a href="mailto:nataliajusticia@gmail.com" className="button">
+              <a
+                href="mailto:nataliajusticia@gmail.com"
+                className={styles.button}
+              >
                 Contact
               </a>
             </li>

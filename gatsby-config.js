@@ -5,7 +5,13 @@ module.exports = {
     description: "I'm Natalia, a frontend developer that loves to code.",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        implementation: require("sass"),
+        additionalData: `@use "src/styles/abstracts/variables" as var;`,
+      },
+    },
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
