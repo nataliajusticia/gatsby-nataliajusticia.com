@@ -30,6 +30,7 @@
   .grid {
     gap: 100px;
     grid-template-columns: 1fr 1fr;
+    padding: 0 var.$space-m;
 
     li:nth-child(2n) {
       transform: translateY(-100px);
