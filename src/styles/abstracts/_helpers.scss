@@ -12,10 +12,6 @@
   @include container($container-max-width-large);
 }
 
-.container-medium {
-  @include container(1200px);
-}
-
 /* Buttons */
 .button {
   @include cta-button--primary;
@@ -61,16 +57,4 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
-}
-
-/* Pattern */
-.pattern-vertical-lines-lg {
-  background: $color-grey;
-  background-image: repeating-linear-gradient(
-    to right,
-    black,
-    black 1px,
-    transparent 1px,
-    transparent
-  ) !important;
 }
