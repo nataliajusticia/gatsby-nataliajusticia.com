@@ -48,15 +48,6 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/blog"
-                aria-label="View blog page"
-                activeClassName={`active`}
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/projects"
                 aria-label="View projects page"
                 activeClassName={`active`}

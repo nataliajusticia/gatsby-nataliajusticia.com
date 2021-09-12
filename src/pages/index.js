@@ -3,7 +3,6 @@ import React from "react";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout/Layout";
 import FrontHeader from "../components/FrontHeader/FrontHeader";
-import LatestArticles from "../components/LatestArticles/LatestArticles";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 
 const IndexPage = () => {
@@ -16,7 +15,6 @@ const IndexPage = () => {
 
       <FrontHeader />
       <LatestProjects />
-      <LatestArticles />
     </Layout>
   );
 };

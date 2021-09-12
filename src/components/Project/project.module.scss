@@ -92,8 +92,12 @@
 }
 
 @media #{var.$medium-up} {
+  .image {
+    transform: translateX(#{var.$space-m});
+  }
+
   .info {
     bottom: -#{var.$space-xxl};
-    left: -#{var.$space-m};
+    left: 0;
   }
 }

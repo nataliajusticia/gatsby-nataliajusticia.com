@@ -15,11 +15,6 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link to="/blog" aria-label="View blog page">
-              Blog
-            </Link>
-          </li>
-          <li>
             <Link to="/projects" aria-label="View projects page">
               Projects
             </Link>
