@@ -7,7 +7,7 @@ const FrontHeader = () => {
     <section className={styles.section}>
       <div className={`container`}>
         <h1 className={styles.title}>
-          I’m natalia, a <span>frontend&nbsp;dev</span>
+          I’m natalia, a <span>frontend&nbsp;dev&nbsp;👩🏻‍💻</span>
           <br /> that loves to code
         </h1>
 

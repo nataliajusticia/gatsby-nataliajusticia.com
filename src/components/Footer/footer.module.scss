@@ -18,14 +18,45 @@
   color: var.$color-white;
 }
 
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: var.$space-m;
+
+  li {
+    margin-right: var.$space-m;
+    margin-bottom: var.$space-m;
+  }
+
+  a {
+    font-family: var.$base-heading-font-family;
+    font-weight: var.$font-weight-bold;
+    color: var.$color-white;
+    font-size: var.$base-h3-font-size;
+    line-height: var.$base-h3-line-height;
+  }
+}
+
 .textRights {
-  font-size: 0.6rem;
-  margin-top: 0;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media #{var.$medium-up} {
   .wrapper {
     padding-top: 112px;
     padding-bottom: 112px;
+  }
+
+  .menu {
+    flex-direction: row;
+
+    li {
+      margin-bottom: 0;
+    }
   }
 }

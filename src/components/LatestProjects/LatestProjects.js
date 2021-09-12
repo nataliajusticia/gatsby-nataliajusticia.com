@@ -10,7 +10,7 @@ const LatestProjects = () => {
     {
       allMdx(
         sort: { fields: frontmatter___date, order: DESC }
-        limit: 6
+        limit: 4
         filter: { fields: { sourceName: { eq: "project" } } }
       ) {
         nodes {

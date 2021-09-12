@@ -27,6 +27,8 @@ const ProjectsPage = ({ data }) => {
                   description={node.frontmatter.description}
                   url={node.frontmatter.url}
                   heroImage={node.frontmatter.hero_image}
+                  tags={node.frontmatter.tags}
+                  bigVersion={true}
                 />
               </li>
             ))}

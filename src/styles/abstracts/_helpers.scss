@@ -37,17 +37,13 @@
 }
 
 .active {
-  background-image: linear-gradient($color-wheat, $color-wheat);
+  background-image: linear-gradient($color-secondary, $color-secondary);
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  background-size: 100% 8px;
+  background-size: 100% 8px !important;
   transition: background-size 0.3s, color 0.3s ease;
   line-height: 1.2;
   font-weight: $font-weight-bold;
-
-  &:hover {
-    background-size: 0% 8px;
-  }
 }
 
 /* Hide only visually, but have it available for screen readers */

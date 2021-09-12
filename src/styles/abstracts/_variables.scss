@@ -10,10 +10,13 @@ $color-white: #fff;
 $color-black: #000;
 $color-green: #95dac1;
 $color-pink: #f8abd8;
-$color-blue: #4c5fd5;
-$color-grey: #535353;
-$color-grey-light: #f4f4f6;
+$color-blue: #6ccede;
 $color-wheat: wheat;
+$color-grey: #535353;
+$color-grey-light: #ececec;
+$color-grey-lighter: #f4f4f6;
+
+$color-secondary: $color-blue;
 
 // Typography
 // --------------------------------------------------
@@ -89,7 +92,7 @@ $base-font-weight: $font-weight-regular;
 $base-font-size: $body-font-size;
 $base-line-height: 1.5;
 $base-body-color: $color-black;
-$base-background: $color-white;
+$base-background: $color-grey-lighter;
 $container-max-width: $container-max-width-xlarge;
 
 /* Headings */

@@ -22,7 +22,7 @@
     background: var.$color-black;
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     );
     z-index: 1;
@@ -39,7 +39,7 @@
 .title {
   color: var.$color-white;
   font-size: 2.5rem;
-  margin-bottom: var.$space-xs;
+  margin: 0;
 }
 
 .description {
@@ -48,9 +48,52 @@
   margin: 0;
 }
 
+.tags {
+  display: none;
+}
+
+// Big version
+.projectBig {
+  .image {
+    &::before {
+      background: none;
+    }
+  }
+
+  .info {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: var.$space-xs;
+  }
+
+  .title {
+    color: var.$color-black;
+  }
+
+  .description {
+    color: var.$color-black;
+    margin-bottom: var.$space-s;
+  }
+
+  .tags {
+    display: flex;
+
+    span {
+      font-size: 0.7rem;
+      background: var.$color-black;
+      color: var.$color-white;
+      padding: 2px var.$space-xs;
+      margin-right: 5px;
+      border-radius: var.$space-xs;
+      letter-spacing: 0.12em;
+    }
+  }
+}
+
 @media #{var.$medium-up} {
   .info {
-    bottom: -#{var.$space-m};
+    bottom: -#{var.$space-xxl};
     left: -#{var.$space-m};
   }
 }

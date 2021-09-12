@@ -179,6 +179,20 @@
     a {
       font-size: 1rem;
       color: var.$color-black;
+      background-image: linear-gradient(
+        var.$color-secondary,
+        var.$color-secondary
+      );
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 8px;
+      transition: background-size 0.3s, color 0.3s ease;
+      line-height: 1.2;
+      font-weight: var.$font-weight-bold;
+
+      &:hover {
+        background-size: 100% 8px;
+      }
     }
   }
 }
