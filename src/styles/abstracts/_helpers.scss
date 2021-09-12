@@ -12,6 +12,10 @@
   @include container($container-max-width-large);
 }
 
+.container-medium {
+  @include container(1200px);
+}
+
 /* Buttons */
 .button {
   @include cta-button--primary;

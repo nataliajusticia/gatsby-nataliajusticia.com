@@ -17,18 +17,18 @@ const BlogPostPage = ({ data }) => {
       />
 
       <article className={styles.article}>
-        <div className={`container-small`}>
-          <h1 className={styles.title}>{data.mdx.frontmatter.title}</h1>
-          <p className={styles.date}>{data.mdx.frontmatter.date}</p>
-        </div>
-
-        <div className={`${styles.imageWrapper} container`}>
+        <div className={`${styles.imageWrapper}`}>
           <GatsbyImage
             image={getImage(data.mdx.frontmatter.hero_image)}
             width={1200}
             aspectRatio={4 / 3}
             className={styles.image}
           />
+        </div>
+
+        <div className={`container-small`}>
+          <h1 className={styles.title}>{data.mdx.frontmatter.title}</h1>
+          <p className={styles.date}>{data.mdx.frontmatter.date}</p>
         </div>
 
         <div className={`container-small`}>
