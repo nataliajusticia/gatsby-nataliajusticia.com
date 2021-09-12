@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
 import * as styles from "./header.module.scss";
@@ -7,6 +7,11 @@ const Header = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body.style.overflow = sidebar ? "hidden" : "auto";
+  }, [sidebar]);
 
   return (
     <header className={styles.header}>

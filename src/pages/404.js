@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout/Layout";
 
+import * as styles from "./notFound.module.scss";
+
 const NotFoundPage = () => {
   return (
     <Layout>
@@ -12,14 +14,14 @@ const NotFoundPage = () => {
         description="I'm Natalia, a frontend developer that loves to code"
       />
 
-      <div className="container">
+      <section className={`${styles.section} container`}>
         <h1>Page not found</h1>
         <p>Sorry, we couldn’t find what you were looking for.</p>
 
         <Link to="/" className="button">
           Go home
         </Link>
-      </div>
+      </section>
     </Layout>
   );
 };

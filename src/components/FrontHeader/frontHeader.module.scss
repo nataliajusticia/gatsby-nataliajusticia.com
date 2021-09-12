@@ -6,14 +6,14 @@
 }
 
 .title {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   margin: 0;
   margin-bottom: var.$space-m;
 
   span {
     color: var.$color-black;
     background-color: var.$color-secondary;
-    padding: 0 var.$space-s;
+    padding: 0 var.$space-xs;
     border-radius: var.$space-xs;
     mix-blend-mode: multiply;
   }
