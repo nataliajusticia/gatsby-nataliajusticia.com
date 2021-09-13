@@ -57,6 +57,9 @@
 // Big version
 .projectBig {
   .image {
+    border: 1px solid var.$color-grey-light;
+    box-shadow: 0px 0px 50px -13px rgba(0, 0, 0, 0.1);
+
     &::before {
       background: none;
     }
@@ -96,17 +99,13 @@
 }
 
 @media #{var.$medium-up} {
-  .image {
-    transform: translateX(#{var.$space-m});
-  }
-
   .title {
     font-size: 2.5rem;
   }
 
   .info {
     bottom: -#{var.$space-xxl};
-    left: 0;
+    left: var.$space-xs;
     padding: 0;
   }
 }

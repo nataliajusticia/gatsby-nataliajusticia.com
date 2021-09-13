@@ -7,14 +7,14 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin: 0;
   margin-bottom: var.$space-xxl;
 }
 
 .grid {
   display: grid;
-  gap: var.$space-m;
+  gap: var.$space-xxl;
   grid-template-columns: 1fr;
   list-style: none;
   padding: 0;
@@ -28,12 +28,11 @@
   }
 
   .grid {
-    gap: 100px;
+    gap: 4rem;
     grid-template-columns: 1fr 1fr;
-    padding: 0 var.$space-m;
 
-    li:nth-child(2n) {
-      transform: translateY(-100px);
+    li:nth-child(even) {
+      margin-top: 8rem;
     }
   }
 }

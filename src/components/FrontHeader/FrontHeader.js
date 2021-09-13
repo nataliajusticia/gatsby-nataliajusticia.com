@@ -5,7 +5,7 @@ import * as styles from "./frontHeader.module.scss";
 const FrontHeader = () => {
   return (
     <section className={styles.section}>
-      <div className={`container`}>
+      <div className={`${styles.wrapper} container`}>
         <h1 className={styles.title}>
           I’m Natalia 👩🏻‍💻,
           <br /> a <span>{"frontendDev"}</span>
@@ -14,8 +14,7 @@ const FrontHeader = () => {
         </h1>
 
         <p className={styles.subtitle}>
-          👋 I love my profession and the possibility to be free doing what I
-          like.
+          I love my profession and the possibility to be free doing what I like.
         </p>
       </div>
     </section>

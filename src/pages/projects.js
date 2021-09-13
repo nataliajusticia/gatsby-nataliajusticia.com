@@ -17,7 +17,7 @@ const ProjectsPage = ({ data }) => {
 
       <section className={styles.section}>
         <div className={`container`}>
-          <h1 className={styles.title}>{"<All Projects/>"}</h1>
+          <h1 className={styles.title}>{"<Projects/>"}</h1>
 
           <ul className={styles.grid}>
             {data.allMdx.nodes.map((node) => (
